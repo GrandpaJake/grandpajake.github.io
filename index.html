@@ -6,13 +6,15 @@
 <body ng-app="plangular">
 
 <div plangular data-src="http://soundcloud.com/listentofastbreak/sunday-drive">
-  <a href="" ng-click="player.play(track)" ng-hide="player.playing == track">
-    <div plangular-icon="play"></div>
-  </a>
-  <a href="" ng-click="player.pause()" ng-show="player.playing == track">
-    <div plangular-icon="pause"></div>
-  </a>
-  <h1>{{ track.user.username }} - {{ track.title }}</h1>
+	<div style="background-image: url(https://scontent-a-iad.xx.fbcdn.net/hphotos-ash2/t1.0-9/29355_371845312903000_1934911230_n.jpg)">
+		<a href="" ng-click="player.play(track)" ng-hide="player.playing == track">
+			<div plangular-icon="play"></div>
+		</a>
+		<a href="" ng-click="player.pause()" ng-show="player.playing == track">
+			<div plangular-icon="pause"></div>
+		</a>
+		<h1>{{ track.user.username }} - {{ track.title }}</h1>
+	</div>
 </div>
 
 </body>
