@@ -13,6 +13,7 @@
 		.l0{left:0}
 		.bg-white{background-color:#fff}
 		.bg-black{background-color:#000}
+		.left{float:left}
 	
 	</style>
 	
@@ -20,13 +21,15 @@
 <body ng-app="plangular">
 
 <div plangular data-src="http://soundcloud.com/listentofastbreak/sunday-drive">
-	<div style="background-image: url(https://scontent-a-iad.xx.fbcdn.net/hphotos-ash2/t1.0-9/29355_371845312903000_1934911230_n.jpg)">
-		<a href="" ng-click="player.play(track)" ng-hide="player.playing == track">
-			<div plangular-icon="play"></div>
-		</a>
-		<a href="" ng-click="player.pause()" ng-show="player.playing == track">
-			<div plangular-icon="pause"></div>
-		</a>
+	<div style="background-image: url(https://scontent-a-iad.xx.fbcdn.net/hphotos-ash2/t1.0-9/29355_371845312903000_1934911230_n.jpg);width: 800px;">
+		<div class="left">
+			<a href="" ng-click="player.play(track)" ng-hide="player.playing == track">
+				<div plangular-icon="play"></div>
+			</a>
+			<a href="" ng-click="player.pause()" ng-show="player.playing == track">
+				<div plangular-icon="pause"></div>
+			</a>
+		</div>
 		<div class="oh relative" style="height:3rem">
           <div class="absolute t0 r0 b0 l0" style="height:.5rem;margin:1.25rem 0;">
             <div class="absolute t0 r0 b0 l0 bg-white"></div>
