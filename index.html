@@ -114,8 +114,8 @@
 		</a>
 		<span align="right"><p class="h3 p2 caps caps-tracked center white">{{ track.user.username }} <br />{{ track.title }}</p></span>
 	</div>
-	<div ng-show="player.playing == track" class="clearfix absolute r0 b0 l0 mr1">
-		<div class="bg-black playerboxaftertop">
+	<div ng-show="player.playing == track">
+		<div class="bg-black playerboxaftertop clearfix absolute r0 b0 l0 mr1">
 				<img src="http://grandpajake.github.io/waveform.jpg" width="800px">
 				<div class="absolute t0 b0 l0 bg-black" style="width: {{ (currentTime / duration) * 100 }}%"></div>
 				<div class="absolute t0 r0 b0 l0" ng-click="seekTo($event)"></div>
