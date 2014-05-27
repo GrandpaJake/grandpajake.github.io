@@ -23,6 +23,7 @@
 		.caps{text-transform:uppercase;letter-spacing:.2em}
 		.center{text-align:center}
 		.white{color:#fff}
+		.black{color:#000}
 		.mr1{margin-right:1rem}
 		.mb4{margin-bottom:4rem}
 		.bg-white{background-color:#fff}
@@ -35,6 +36,7 @@
 		.geo-32{width:32px;height:32px}
 		.geo-white{fill:#fff}
 		.geo-dark-gray{fill:#405660}
+		.geo-black:{fill:#000}
 		.button{border-radius:.25rem;transition-duration:.2s;transition-timing-function:ease;transition:box-shadow , background-color;-webkit-font-smoothing:antialiased}
 		.button{font-family:inherit;font-weight:bold;text-decoration:none;cursor:pointer;border:none;-webkit-appearance:none;appearance:none;white-space:nowrap;display:inline-block;line-height:2rem;height:auto;min-height:2rem;padding:0.5rem 1rem}
 		.button:hover,.button:focus{outline:none}
@@ -46,6 +48,10 @@
 		.aspect-16o9{width:100%;height:0;padding-bottom:56.25%}
 		.bg-cover{background-size:cover}
 		.bg-center{background-position:center}
+		.playerboxbefore{width:800px;height:300px}
+		.playerboxaftertop{width:800px;height:220px}
+		.playerboxafterbottom{width:800px;height:80px}
+		.floatleft{float:left}
 	</style>
 	
 </head>
@@ -98,6 +104,35 @@
     </div>
     <small>{{ currentTime | playTime }} | {{ duration | playTime }}</small>
   </div>
+</div>
+
+
+<div plangular data-src="http://soundcloud.com/listentofastbreak/villains" class="measure-wide wrap mb4" ng-hide="player.playing == track">
+	<div class="bg-black playerboxbefore">
+		<a href="" ng-click="player.play(track)" class="img">
+			<span><img src="http://grandpajake.github.io/playicon.jpg"></img></span>
+		</a>
+		<span align="right"><p class="h3 p2 caps caps-tracked center white">{{ track.user.username }} <br />{{ track.title }}</p></span>
+	</div>
+	<div ng-show="player.playing == track">
+		<div class="bg-black playerboxaftertop">
+				<img src="http://grandpajake.github.io/waveform.jpg" width="800px">
+				<div class="absolute t0 b0 l0 bg-white" style="width: {{ (currentTime / duration) * 100 }}%"></div>
+				<div class="absolute t0 r0 b0 l0" ng-click="seekTo($event)"></div>
+		</div>
+		<div class="bg-white playerboxafterbottom">
+			<span width="24px" class="floatleft">
+				<a href="" ng-click="player.pause()">
+					<div plangular-icon="pause" class="geo-24 geo-black"></div>
+				</a>
+			</span>
+			<span width="752px" class="floatleft">
+				<div align="center"> <p class="h3 p2 caps caps-tracked center black">{{ track.user.username }} - {{ track.title }}</p> </div>
+			</span>
+			<span width="24px" class="floatleft">
+			</span>
+		</div>
+	</div>
 </div>
 
 
