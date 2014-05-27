@@ -121,16 +121,20 @@
 				<div class="absolute t0 r0 b0 l0" ng-click="seekTo($event)"></div>
 		</div>
 		<div class="bg-white playerboxafterbottom">
-			<span width="24px" class="floatleft">
-				<a href="" ng-click="player.pause()">
-					<div plangular-icon="pause" class="geo-24 geo-black"></div>
-				</a>
-			</span>
-			<span width="752px" class="floatleft">
-				<div align="center"> <p class="h3 p2 caps caps-tracked center black">{{ track.user.username }} - {{ track.title }}</p> </div>
-			</span>
-			<span width="24px" class="floatleft">
-			</span>
+			<table width="800px">
+				<tr>
+					<td width="24px">
+						<a href="" ng-click="player.pause()">
+							<div plangular-icon="pause" class="geo-24 geo-black"></div>
+						</a>
+					</td>
+					<td width="752px">
+						<div align="center"> <p class="h3 p2 caps caps-tracked center black">{{ track.user.username }} - {{ track.title }}</p> </div>
+					</td>
+					<td width="24px">
+					</td>
+				</tr>
+			<table>
 		</div>
 	</div>
 </div>
