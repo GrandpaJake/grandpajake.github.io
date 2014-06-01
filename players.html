@@ -70,13 +70,15 @@
 
 <body ng-app="plangular">
 <div plangular data-src="http://soundcloud.com/listentofastbreak/the-basement" width="400px" height="200px">
-	<div class="bg-white playertop" align="center">
+	<table class="bg-black">
+	<tr><td class="bg-white playertop" align="center">
 		<h2 class="h2 regular center black inconsolata">{{ track.title }}</h2>
-	</div>
-	<div class="bg-black playerbottom">
+	</td></tr>
+	<tr><td class="bg-black playerbottom">
 		<h3 class="h3 white center vmiddle inconsolata"><a href="" class="white" ng-click="player.play(track)" ng-hide="player.playing == track">(play JAW)</a></h3>
 		<h3 class="h3 white center vmiddle inconsolata"><a href="" class="white" ng-click="player.pause()" ng-show="player.playing == track">(pause JAW)</a></h3>
-	</div>
+	</td></tr>
+	</table>
 </div>
 	
 
