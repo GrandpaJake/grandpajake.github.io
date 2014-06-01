@@ -13,6 +13,10 @@
 		.relative{position:relative}
 		.absolute{position:absolute}
 		.oh{overflow:hidden}
+		a:link {text-decoration:none;}
+		a:visited {text-decoration:none;}
+		a:hover {text-decoration:none;}
+		a:active {text-decoration:none;}
 		h1,.h1,.f1{font-size:2.25rem;line-height:3rem}
 		.h1{font-size:3rem;line-height:4rem}
 		h3,.h3,.f3{font-size:1.25rem;line-height:2rem}
@@ -64,10 +68,10 @@
 
 <body ng-app="plangular">
 <div plangular data-src="http://soundcloud.com/listentofastbreak/bigbros" width="600px" height="400px">
-	<div class="bg-white" align="center">
+	<div class="bg-white playertop" align="center">
 		<h1 class="h1 regular center black">{{ track.title }}</h1>
 	</div>
-	<div class="bg-black">
+	<div class="bg-black playerbottom">
 		<a href="" ng-click="player.play(track)" ng-hide="player.playing == track"><h3 class="h3 white middle">(play JAW)</h3></a>
 		<a href="" ng-click="player.pause()" ng-show="player.playing == track"><h3 class="h3 white middle">(pause JAW)</h3></a>
 	</div>
