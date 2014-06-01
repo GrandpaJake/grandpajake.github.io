@@ -7,7 +7,7 @@
 
 	<style type="text/css">
 		body,button,input,select,textarea,pre{margin:0}
-		h1,h2,h3,h4,h5,h6,p,dl,ol,ul{margin-top:0;margin-bottom:1rem}
+		h1,h2,h3,h4,h5,h6,p,dl,ol,ul{margin-top:0;margin-bottom:0}
 		button,input,select,textarea{font-family:inherit;font-size:100%}
 		.inconsolata{font-family:'Inconsolata'}
 		.relative{position:relative}
@@ -35,6 +35,7 @@
 		.mb4{margin-bottom:4rem}
 		.bg-white{background-color:#fff}
 		.bg-black{background-color:#000}
+		.font16{font-size:16px}
 		.left{float:left}
 		.button-geo .geo-16{position:relative;top:2px}
 		.button-geo .geo-24{position:relative;top:4px}
@@ -70,7 +71,7 @@
 <div plangular data-src="http://soundcloud.com/listentofastbreak/the-basement" width="400px" height="200px">
 	<table class="bg-black">
 	<tr><td class="bg-white playertop" align="center">
-		<font class="regular center black inconsolata" size="18px">{{ track.title }}</font>
+		<p class="regular center black inconsolata font16">{{ track.title }}</p>
 	</td></tr>
 	<tr><td class="bg-black playerbottom">
 		<h3 class="h3 white center vmiddle inconsolata"><a href="" class="white" ng-click="player.play(track)" ng-hide="player.playing == track">(play JAW)</a><a href="" class="white" ng-click="player.pause()" ng-show="player.playing == track">(pause JAW)</a></h3>
